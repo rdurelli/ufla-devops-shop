@@ -1,6 +1,6 @@
 # Guilherme Fabricio Brito da Rosa - 202120497
 
-- **GitHub:** @guidev115
+- **GitHub:** guidev115
 - **Curso e periodo:** Ciencia da Computacao, 8o periodo
 - **Linguagem que voce domina melhor:** PHP/Laravel
 - **Ja usou Linux no dia a dia?** SIM - Direto, ainda mais no trabalho
@@ -36,13 +36,3 @@ Certamente é a taca de falha em mudanças. Apesar da margem ser grande para o a
 > Guarde este arquivo. Na **semana 15** voce vai reler o que escreveu hoje e
 > refazer o mesmo diagnostico sobre a plataforma que tera construido. A
 > diferenca entre os dois textos e, na pratica, o que voce aprendeu no semestre.
-
-<!--
-COMO USAR ESTE MODELO
-
-  1. Copie este arquivo para alunos/<seu-usuario-github>.md
-     (o nome do arquivo precisa ser exatamente o seu usuario do GitHub)
-  2. Substitua tudo o que esta entre < >, inclusive os proprios sinais
-  3. Apague este comentario e o bloco de instrucoes do diagnostico, se quiser
-  4. NAO altere nem apague este arquivo _modelo.md
--->
