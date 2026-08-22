@@ -9,7 +9,7 @@
 
 ## Diagnóstico DORA
 - Frequência de implantação: Algumas dezenas de vezes
-- Entre uma e duas semanas
-- Dependendo da prioridade, de alguns minutos até um dia
-- Acredito que 1 a cada 10 entregas quebrava algo já feito
+- Lead Time: Entre uma e duas semanas
+- Tempo de restauracao: Dependendo da prioridade, de alguns minutos até um dia
+- Taxa de falha em mudancas: Acredito que 1 a cada 10 entregas quebrava algo já feito
 - Qual das métrica era pior no projeto: Acredito que a taxa de falha poderia ser algo a melhorar. O sistema em que trabalho não tem funcionalidades de testes muito robustas, o que demanda que nós desenvolvedores tenhamos total controle de tudo o que foi implementado. Isso significa que ao criar uma nova funcionalidade, devido ao alto volume de regras de negócio implementadas, as vezes quebramos algo por acidente.
