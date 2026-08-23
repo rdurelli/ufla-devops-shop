@@ -1,0 +1,27 @@
+
+== Verificação de ambiente -- DevOps na Prática ==
+Sistema detectado: debian
+
+-- Ferramentas --
+[ok]      git         2.53.0
+[ok]      docker      29.7.2
+[ok]      kubectl     1.36.4
+[ok]      kind        0.33.0
+[ok]      helm        3.21.4
+[ok]      terraform   1.15.9
+
+-- Docker em funcionamento --
+[ok]      daemon      respondendo
+[ok]      compose     5.5.0
+
+-- Configuração --
+[ok]      git config  Guilherme L. Azevedo <guilhermeazevedo2212@gmail.com>
+
+-- Recursos da máquina --
+[ok]      RAM         17 GB
+[ok]      disco       140 GB livres
+
+Ambiente pronto. Bom semestre!
+
+Próximo passo: crie o arquivo alunos/<seu-usuario>.md e abra o Pull Request.
+
