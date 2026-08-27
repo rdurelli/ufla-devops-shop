@@ -24,5 +24,3 @@ Sistema detectado: debian
 Ambiente pronto. Bom semestre!
 (1 aviso(s) acima -- não impedem a entrega, mas leia com atenção.)
 
-Próximo passo: crie o arquivo alunos/<seu-usuario>.md e abra o Pull Request.
-
