@@ -1,4 +1,4 @@
-# <Seu Nome>
+# Pedro Militao Mello Reis
 
 - **GitHub:** @MilitaoPedro
 - **Curso e periodo:** Ciencia da Computacao, 8o periodo
