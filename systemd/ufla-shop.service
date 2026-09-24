@@ -1,0 +1,13 @@
+[Unit]
+Description=UFLA DevOps Shop API
+After=postgresql.service redis-server.service
+
+[Service]
+User=ufla-shop
+WorkingDirectory=/opt/ufla-shop
+EnvironmentFile=/etc/ufla-shop.env
+ExecStart=/opt/ufla-shop/.venv/bin/uvicorn app:api --port 8000 --host 127.0.0.1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
