@@ -1,0 +1,14 @@
+[Unit]
+Description=UFLA DevOpsShop
+After=postgresql.service
+
+[Service]
+User=ufla-shop
+WorkingDirectory=/opt/ufla-shop
+EnvironmentFile=/etc/ufla-shop.env
+ExecStart=/opt/ufla-shop/.venv/bin/uvicorn app:api --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
