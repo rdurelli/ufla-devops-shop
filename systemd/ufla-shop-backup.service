@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup UFLA Shop
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ufla-shop/scripts/backup.sh
