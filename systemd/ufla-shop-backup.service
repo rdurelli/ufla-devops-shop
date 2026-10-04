@@ -1,0 +1,7 @@
+[Unit]
+Description=Servico de Backup da Base de Dados ufla-devops-shop
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/ufla-shop.env
+ExecStart=/opt/ufla-shop/scripts/backup.sh
