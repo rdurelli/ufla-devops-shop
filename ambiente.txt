@@ -1,0 +1,27 @@
+
+== Verificação de ambiente -- DevOps na Prática ==
+Sistema detectado: arch
+
+-- Ferramentas --
+[ok]      git         2.54.0
+[ok]      docker      29.6.0
+[ok]      kubectl     1.36.2
+[ok]      kind        0.32.0
+[ok]      helm        4.2.2
+[ok]      terraform   1.15.9
+
+-- Docker em funcionamento --
+[ok]      daemon      respondendo
+[ok]      compose     5.1.4
+
+-- Configuração --
+[ok]      git config  DJhuan <jhuancarlossd@proton.me>
+
+-- Recursos da máquina --
+[ok]      RAM         14 GB
+[ok]      disco       103 GB livres
+
+Ambiente pronto. Bom semestre!
+
+Próximo passo: crie o arquivo alunos/<seu-usuario>.md e abra o Pull Request.
+
