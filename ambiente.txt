@@ -1,0 +1,27 @@
+
+== Verificação de ambiente -- DevOps na Prática ==
+Sistema detectado: macos
+
+-- Ferramentas --
+[ok]      git         2.39.5
+[ok]      docker      29.6.2
+[ok]      kubectl     1.35.0
+[ok]      kind        0.31.0
+[ok]      helm        4.2.3
+[ok]      terraform   1.16.1
+
+-- Docker em funcionamento --
+[ok]      daemon      respondendo
+[ok]      compose     5.3.1
+
+-- Configuração --
+[ok]      git config  MilitaoPedro <pedromilitaomre@gmail.com>
+
+-- Recursos da máquina --
+[ok]      RAM         16 GB
+[ok]      disco       296 GB livres
+
+Ambiente pronto. Bom semestre!
+
+Próximo passo: crie o arquivo alunos/<seu-usuario>.md e abra o Pull Request.
+
