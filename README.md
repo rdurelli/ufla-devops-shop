@@ -48,7 +48,7 @@ ufla-devops-shop/
 ├── analises/                  # análises da Atividade 1 e (em logs/) da Atividade 2
 └── .github/
     ├── pull_request_template.md
-    └── workflows/             # verificação automática de cada atividade
+      └── workflows/             # CI e verificações DevSecOps
 ```
 
 ## A aplicação
@@ -164,3 +164,13 @@ Esta é a mesma estrutura de um bom *issue* e de um bom *postmortem*.
 Permitido e incentivado. Em contrapartida, você deve ser capaz de explicar
 qualquer linha entregue: a arguição final pergunta o *porquê* das decisões, não
 a sintaxe.
+
+## Pipeline DevSecOps
+
+O workflow `.github/workflows/devsecops.yml` executa testes, Gitleaks,
+SonarCloud, Trivy e Syft em Pull Requests. Vulnerabilidades `HIGH` e `CRITICAL`
+com correção disponível bloqueiam o pipeline; os relatórios Trivy e o SBOM
+CycloneDX ficam disponíveis como artifacts. A imagem só é publicada no GHCR
+após todos os gates obrigatórios passarem. A configuração manual do SonarCloud,
+do Quality Gate e da proteção da branch está em
+[`docs/devsecops.md`](docs/devsecops.md).
