@@ -1,0 +1,21 @@
+# syntax=docker/dockerfile:1
+
+# Usa a imagem base completa do Python (com ferramentas de build e pacotes Debian pesados)
+FROM python:3.12
+
+WORKDIR /app
+
+# Copia todo o conteúdo do repositório de uma vez (incluindo testes, cache, venv se houver)
+COPY . /app
+
+# Instala as dependências mantendo o cache do pip e gerando bytecode
+RUN pip install -r requirements.txt
+
+# Roda como root (comportamento padrão, não recomendado)
+# Sem HEALTHCHECK declarado
+
+EXPOSE 8000
+
+# ERRO CLÁSSICO DE PARADA: CMD em formato shell (string) cria um processo /bin/sh como PID 1.
+# O SIGTERM do 'docker stop' não chega ao Uvicorn, fazendo o container demorar 10s para parar.
+CMD uvicorn app.principal:api --host 0.0.0.0 --port 8000
