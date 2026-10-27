@@ -251,7 +251,7 @@ def listar_pedidos() -> list[dict[str, Any]]:
 
 
 # --------------------------------------------------------------------- front
-@api.get("/", include_in_schema=False)
+@api.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
 def pagina_inicial() -> FileResponse:
     return FileResponse(ESTATICO / "index.html")
 
