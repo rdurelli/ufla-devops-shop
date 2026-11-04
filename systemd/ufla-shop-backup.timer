@@ -1,0 +1,10 @@
+[Unit]
+Description=Agendamento diário do backup da UFLA DevOps Shop
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+Unit=ufla-shop-backup.service
+
+[Install]
+WantedBy=timers.target

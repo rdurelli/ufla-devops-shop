@@ -1,0 +1,7 @@
+[Unit]
+Description=Backup do banco da UFLA DevOps Shop
+After=postgresql.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ufla-shop/scripts/backup.sh
