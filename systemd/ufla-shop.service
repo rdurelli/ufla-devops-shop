@@ -1,0 +1,38 @@
+[Unit]
+Description=ufla-devops-shop --- API (FastAPI) da loja
+Documentation=https://github.com/rdurelli/ufla-devops-shop
+# A API consulta PostgreSQL no boot: sem esta ordem o /ready devolve 503
+# nos primeiros segundos, porque o banco ainda esta subindo.
+After=network-online.target postgresql.service redis-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# Usuario de sistema, sem shell e sem home: a aplicacao nunca roda como root.
+User=ufla-shop
+Group=ufla-shop
+
+WorkingDirectory=/opt/ufla-shop
+
+# Tudo o que o processo precisa (DATABASE_URL, REDIS_URL, CACHE_TTL) vem
+# daqui. O systemd nao herda o ambiente do shell que chamou o deploy.
+EnvironmentFile=/etc/ufla-shop.env
+
+# Caminho absoluto do uvicorn: o PATH do systemd nao inclui o venv.
+ExecStart=/opt/ufla-shop/.venv/bin/uvicorn app:api --host 127.0.0.1 --port 8000
+
+# Sobe de novo sozinho quando o processo morre (inclusive com kill -9).
+Restart=on-failure
+RestartSec=3
+
+# Endurecimento basico: o processo escreve apenas no proprio diretorio.
+NoNewPrivileges=true
+PrivateTmp=true
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ufla-shop
+
+[Install]
+WantedBy=multi-user.target

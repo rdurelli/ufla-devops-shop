@@ -1,0 +1,17 @@
+[Unit]
+Description=Backup diario do banco loja as 3h da manha
+Documentation=https://github.com/rdurelli/ufla-devops-shop
+Requires=ufla-shop-backup.service
+
+[Timer]
+# Diario, as 3h da manha no fuso da maquina.
+OnCalendar=*-*-* 03:00:00
+# Persistent=true: se a maquina estava desligada na hora marcada, o systemd
+# roda o backup assim que ela voltar, em vez de pular o dia.
+Persistent=true
+# Espalha a execucao em ate 5 min para nao coincidir com outros timers.
+RandomizedDelaySec=300
+Unit=ufla-shop-backup.service
+
+[Install]
+WantedBy=timers.target

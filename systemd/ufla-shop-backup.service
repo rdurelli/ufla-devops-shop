@@ -1,0 +1,24 @@
+[Unit]
+Description=Backup do banco loja (ufla-devops-shop)
+Documentation=https://github.com/rdurelli/ufla-devops-shop
+After=postgresql.service
+Requires=postgresql.service
+
+[Service]
+# oneshot: roda ate o fim e sai. Nao e um servico que fica de pe.
+Type=oneshot
+
+User=ufla-shop
+Group=ufla-shop
+
+WorkingDirectory=/opt/ufla-shop
+EnvironmentFile=/etc/ufla-shop.env
+# O backup.sh le a senha do .pgpass e escreve os dumps neste diretorio.
+Environment=PGPASSFILE=/opt/ufla-shop/.pgpass
+Environment=BACKUP_DIR=/var/backups/ufla-shop
+
+ExecStart=/opt/ufla-shop/scripts/backup.sh
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=backup
